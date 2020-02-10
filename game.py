@@ -20,11 +20,10 @@ def game():
     a=("We finally get to Fenway and can't find our tickets in my backpack.")
     c=("Yes!! I finally found them in my pocket.")
     o=("The game is about to start, we cut it close.")
-    q=("My favorite player" ,favoriteplayer, "hit a homerun right in the vacinity of my seat!")
+    q=("My favorite player" ,favoriteplayer, "hit a homerun right near my seat!")
     h=("I caught the ball!!")
-
     p=("The Red Sox won the game! They are now doing post game interviews with some of our favorite players!")
-    w=(name, "Congratulations," ,name, "you have won! Thank you for your help! Would you like to play again?")
+    w=("Congratulations," ,name, "you have won! Thank you for your help! Would you like to play again?")
 
     print(i) 
 
