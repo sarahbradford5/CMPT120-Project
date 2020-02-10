@@ -2,6 +2,9 @@
 # date: 2/10/2020
 # citation: got template from iLearn, collaborated with Jadyn Kennedy and Michael Conger
 
+def copyright(fenway):
+    print(fenway)
+
 def game():
     print("Help Me Get to Fenway!")
 
@@ -27,7 +30,7 @@ def game():
     h="I caught the ball!!"
     p="The Red Sox won the game! They are now doing post game interviews with some of our favorite players!"
     w="Congratulations",name,"you have won! Thank you for your help! Would you like to play again?"
-    b="created by Sarah Bradford 2/10/2020"
+
 
     print(greeting1,)
 
@@ -97,12 +100,14 @@ def game():
     print(w)
     input(enter)
     
-    print(b)
+    
 
-def main(fenway):
-    fenway() 
+def main():
+     game()
+     copyright1="created by Sarah Bradford 2/10/2020"
+     copyright(copyright1)
+    
 
-
-main(game)
+main()
 
 
