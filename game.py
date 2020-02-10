@@ -2,7 +2,10 @@
 # date: 2/10/2020
 
 
+
 def game():
+    print("Help Me Get to Fenway!")
+
     enter="press enter to continue"
     score=0
     name=input("enter your name")
@@ -25,6 +28,7 @@ def game():
     h=("I caught the ball!!")
     p=("The Red Sox won the game! They are now doing post game interviews with some of our favorite players!")
     w=("Congratulations",name,"you have won! Thank you for your help! Would you like to play again?")
+    b=("citations: got template from iLearn, collaborated with Jadyn Kennedy and Michael Conger")
 
     print(greeting1,)
 
@@ -92,9 +96,13 @@ def game():
     print()
 
     print(w)
+    print(b)
 
-def main():
-    game()
-    print ("citations: got template from iLearn, collaborated with Jadyn Kennedy and Michael Conger")
+def main(fenway):
+    fenway() 
+    
 
-main()
+
+main(game)
+
+
