@@ -1,112 +1,128 @@
 # name: Sarah Bradford
-# date: 2/10/2020
+# date: 3/2/2020
 # citation: got template from iLearn, collaborated with Jadyn Kennedy and Michael Conger
 
 def copyright(fenway):
     print(fenway)
 
-def game():
-    print("Help Me Get to Fenway!")
+locales["you caught the ball from your favorite player", "you spilt your drink all over your jacket", "your friend bought you a tshirt of your favorite player", "you made it on the jumbotron", 
+"you went to the bathroom and missed a great play", "you found a seat right behind the dugout"]
 
-    enter="press enter to continue"
-    score=0
+
+
+print("Help Me Get to Fenway!")
+
+enter="press enter to continue"
+score=0
+
+
+def greeting():
     name=input("enter your name")
     favoriteplayer=input("enter your favorite Red Sox player")
     greeting1="hello",name,"how are you?"
     intro="I am running late. Help me get to the Red Sox game tonight!"
-    l="My dad just gave me his tickets to the baseball game tonight, but I am running late and I have to pick up my friend and then take the T into Boston."
-    x="I can't wait to see",favoriteplayer
-    m="Oh no",name,"! My car is almost out of gas. I have to stop and fill up my tank."
-    n="I get to my friends house, but she isn't ready to go yet. 10 minutes later she finally gets into the car and we head on our way."
-    y="I get to the T station but, it already left without us."
-    z="We have to drive to another station to get to another T."
-    v="We finally get on the T and head into Boston."
-    t="We have arrived in Boston!"
-    s="Now we Uber to Fenway, and everything seems to be going our way."
-    a="We finally get to Fenway and can't find our tickets in my backpack."
-    c="Yes!! I finally found them in my pocket."
-    o="The game is about to start, we cut it close."
-    q="My favorite player",favoriteplayer,"hit a homerun right near my seat!"
-    h="I caught the ball!!"
-    p="The Red Sox won the game! They are now doing post game interviews with some of our favorite players!"
-    w="Congratulations",name,"you have won! Thank you for your help! Would you like to play again?"
-
-
-    print(greeting1,)
-
-    print(intro)
+    print(greeting1, intro)
     input(enter)
 
-    print() # Prints a blank line
-    print(l)
-    print(x)
-    print("Score:", score)
+def catch():
+    locales[0]
+    print("Score:", score+100)
     input(enter)
     print()
 
-    print(m)
-    print("Score:", score + 50)
+def drink():
+    locales[1]
+    print("Score:", score-50)
     input(enter)
     print()
 
-    print(n)
+def friend():
+    locales[2]
     print("Score:", score + 100)
     input(enter)
     print()
 
-    print(y)
-    print(z)
-    print("Score:", score + 150)
+def jumbo():
+    locales[3]
+    print("Score:", score + 100)
     input(enter)
     print()
 
-    print(v)
-    print("Score:", score + 200)
+def dugout():
+    locales[4]
+    print("Score:", score + 100)
     input(enter)
     print()
 
-    print(t)
-    print("Score:", score + 250)
-    input(enter)
-    print()
+def bathroom():
+   locales[5]
+   print("Score:", score-50)
+   input(enter)
+   print()
 
-    print(s)
-    print("Score:", score + 300)
-    input(enter)
-    print()
 
-    print(a)
-    print(c)
-    print("Score:", score + 350)
-    input(enter)
-    print()
 
-    print(o)
-    print("Score:", score + 400)
-    input(enter)
-    print()
 
-    print(q)
-    print(h)
-    print("Score:", score + 450)
-    input(enter)
-    print()
-    
-    print(p)
-    print("Score:", score + 500)
-    input(enter)
-    print()
-
+def congrats():
     print(w)
     input(enter)
     
-    
+
+
 
 def main():
-     game()
-     copyright1="created by Sarah Bradford 2/10/2020"
-     copyright(copyright1)
-    
+    greeting()
+    loop()
+    Exit()
+    copyright1="created by Sarah Bradford 3/2/2020"
+    copyright(copyright1)
+
+
+def loop():
+    x=1
+    while x==1:
+        prompt = "which direction would you like to go?\n"
+        choice = input (prompt)
+        invalid="that command was invalid, please enter help"
+        Help = "please input north, south, east or west, or quit\n"
+        north = "lets go north"
+        south = "lets go south"
+        east = "lets go east"
+        west = "lets go west"
+        if choice [0] == "h":
+            x=1
+            print (Help)
+        elif choice [0] =="q":
+            x=2
+            Quit ()
+        elif choice [0] == "n" or choice [0] =="s" or choice [0] == "e" or choice [0] =="w":
+            x=1
+        else:
+            print (invalid)
+            if players current position = the first locale in the list:
+                if they say north:
+                    print some locale
+                if they say east:
+                    print some locale
+                if they say west:
+                    say invaid
+                if they say south:
+                    print(invalid)
+                    
+            if the players current positin = the second locale in the list:
+                if they say north:
+                    have them go to a different locale (it doesn't matter which one)
+                if they say east:
+                    say invalid
+                if they say west:
+                    print some locale
+                if they say south:
+                    print some locale 
+            
+
+def quit():
+    print("okay, bye")
+
 
 main()
 
