@@ -97,87 +97,69 @@ def loop():
         elif choice [0] == "n" or choice [0] =="s" or choice [0] == "e" or choice [0] =="w":
             x=1
             if position == locales[0]:
+                x=1
                 if choice [0] == "n":
-                    x=1
                     drink()
                 elif choice [0] =="s":
-                    x=1
                     print (invalid)
                 elif choice [0] =="e":
-                    x=1
                     friend()
                 elif choice [0] =="w":
-                    x=1
                     print(invalid)
                     
             elif position == locales[1]:
+                x=1
                 if choice [0] == "n":
-                    x=1
                     print(invalid)
                 elif choice [0] =="s":
-                    x=1
                     catch()
                 elif choice [0] =="e":
-                    x=1
                     bathroom()
                 elif choice [0] =="w":
-                    x=1
                     print (invalid)
                                                         
             elif position == locales[2]:
+                x=1
                 if choice [0] == "n":
-                    x=1
                     bathroom() 
                 elif choice [0] =="s":
-                    x=1
                     print (invalid)  
                 elif choice [0] =="e":
-                    x=1
                     jumbo() 
                 elif choice [0] =="w":
-                    x=1
                     catch() 
 
             elif position == locales[3]:
+                x=1
                 if choice [0] == "n":
-                    x=1
                     dugout()
                 elif choice [0] =="s":
-                    x=1
                     print(invalid)
                 elif choice [0] =="e":
-                    x=1
                     print(invalid)
                 elif choice [0] =="w":
-                    x=1
                     friend()
 
             elif position == locales[4]:
+                x=1
                 if choice [0] == "n":
-                    x=1
                     print(invalid)
                 elif choice [0] =="s":
-                    x=1
                     friend()
                 elif choice [0] =="e":
-                    x=1
                     dugout()
                 elif choice [0] =="w":
-                    x=1
                     drink()
 
-            elif position == locales[5]:                                         
+            elif position == locales[5]:
+                x=1
                 if choice [0] == "n":
-                    x=1
                     print(invalid)
                 elif choice [0] =="s":
-                    x=1
                     jumbo()
                 elif choice [0] =="e":
-                    x=1
                     print(invalid)
                 elif choice [0] =="w":
-                    x=1
                     bathroom()
         else:
             x=1
@@ -196,5 +178,3 @@ def Quit():
 
 
 main()
-
-
