@@ -1,24 +1,23 @@
 # name: Sarah Bradford
 # date: 4/6/2020
-# citation: got template from iLearn, collaborated with Jadyn Kennedy and Michael Conger
+# citation: got template from iLearn, collaborated with Jadyn Kennedy
 
 
 #global list
-locales = ["you caught the ball from your favorite player", "you spilt your drink all over your jacket", "your friend bought you a tshirt of your favorite player", "you made it on the jumbotron", 
+locales = ["you caught the ball from your favorite player", "you spilt your drink all over your jacket", "your friend bought you a tshirt of your favorite player", "you made it on the jumbotron",
 "you went to the bathroom and missed a great play", "you found a seat right behind the dugout"]
 
-#new global list
+#global list names
 locnames = ["catch", "drink", "friend", "jumbo", "bathroom", "dugout"]
 
 #tracking where player has been
-moves = [False, False, False, False, False, False] 
+moves = [False, False, False, False, False, False]
 
 score=0
 playermoves=0
 position=locales[0]
 currentlocale=locnames[0]
 
-playermoves=0
 
 print("Fenway Trip!")
 enter="press enter to continue"
@@ -30,31 +29,32 @@ def greeting():
     greeting1="hello",name,"how are you?"
     intro="Let's go watch a baseball game!"
     print(greeting1, intro)
-    print(playermoves, 8)
+    print("moves left", 9)
     input(enter)
 
 def catch():
-    global currentlocale 
+    global currentlocale
     global position #determine players position
     global score
     global moves
-    global playermoves 
+    global playermoves
     if moves[0] == False:
         score = score + 100
     else:
-        score = score 
+        score = score
     currentlocale = locnames[0]
     position = locales[0]
     print(currentlocale)
+    print("moves left", 8 - playermoves)
     print(position)
-    print (score + 100)
+    print(score + 100)
     input(enter)
     moves[0] = True
     playermoves = playermoves + 1
     return moves[0], playermoves
 
 def drink():
-    global currentlocale 
+    global currentlocale
     global position #determine players position
     global score
     global moves
@@ -62,12 +62,13 @@ def drink():
     if moves[1] == False:
         score = score - 50
     else:
-        score = score 
+        score = score
     currentlocale = locnames[1]
     position = locales[1]
     print(currentlocale)
+    print("moves left", 8 - playermoves)
     print(position)
-    print (score - 50)
+    print(score - 50)
     input(enter)
     moves[1] = True
     playermoves = playermoves + 1
@@ -75,7 +76,7 @@ def drink():
 
 
 def friend():
-    global currentlocale 
+    global currentlocale
     global position #determine players position
     global score
     global moves
@@ -83,10 +84,11 @@ def friend():
     if moves[2] == False:
         score = score + 100
     else:
-        score = score 
+        score = score
     currentlocale = locnames[2]
     position = locales[2]
     print(currentlocale)
+    print("moves left", 8 - playermoves)
     print(position)
     print(score + 100)
     input(enter)
@@ -96,7 +98,7 @@ def friend():
 
 
 def jumbo():
-    global currentlocale 
+    global currentlocale
     global position #determine players position
     global score
     global moves
@@ -104,40 +106,42 @@ def jumbo():
     if moves[3] == False:
         score = score + 100
     else:
-        score = score 
+        score = score
     currentlocale = locnames[3]
     position = locales[3]
     print(currentlocale)
+    print("moves left", 8 - playermoves)
     print(position)
     print(score + 100)
     input(enter)
     moves[3] = True
-    playermoves = playermoves + 1
+    playermoves = 8 - playermoves
     return moves[3], playermoves
 
 def bathroom():
-    global currentlocale 
+    global currentlocale
     global position #determine players position
     global score
     global moves
     global playermoves
     if moves[4] == False:
-        score = - 50 
+        score = - 50
     else:
-        score = score 
+        score = score
     currentlocale = locnames[4]
     position = locales[4]
     print(currentlocale)
+    print("moves left", 8 - playermoves)
     print(position)
     print(score - 50)
     input(enter)
     moves[4] = True
     playermoves = playermoves + 1
     return moves [4], playermoves
-    
+   
 
 def dugout():
-    global currentlocale 
+    global currentlocale
     global position #determine players position
     global score
     global moves
@@ -145,10 +149,11 @@ def dugout():
     if moves[5] == False:
         score = score + 100
     else:
-        score = score 
+        score = score
     currentlocale = locnames[5]
     position = locales[5]
     print(currentlocale)
+    print("moves left", 8 - playermoves)
     print(position)
     print(score + 100)
     input(enter)
@@ -156,7 +161,7 @@ def dugout():
     playermoves = playermoves + 1
     return moves[5], playermoves
 
-    
+   
 def End():
     thanks = "Thank you for playing!"
     print(thanks)
@@ -191,7 +196,7 @@ def loop():
                     friend()
                 elif choice [0] =="w":
                     print(invalid)
-                    
+                   
             elif position == locales[1]:
                 x=1
                 if choice [0] == "n":
@@ -202,17 +207,17 @@ def loop():
                     bathroom()
                 elif choice [0] =="w":
                     print (invalid)
-                                                        
+                                                       
             elif position == locales[2]:
                 x=1
                 if choice [0] == "n":
-                    bathroom() 
+                    bathroom()
                 elif choice [0] =="s":
                     print (invalid)  
                 elif choice [0] =="e":
-                    jumbo() 
+                    jumbo()
                 elif choice [0] =="w":
-                    catch() 
+                    catch()
 
             elif position == locales[3]:
                 x=1
@@ -251,18 +256,20 @@ def loop():
             print(invalid)
         if playermoves == 8:
             x = 0
-            quit()
+            Quit()
 
 def main():
     greeting()
     loop()
     End()
-    copyright1="created by Sarah Bradford 3/2/2020"
+    copyright1="created by Sarah Bradford 4/6/2020"
     copyright(copyright1)
 
 
 def Quit():
-    print("okay, bye")
+    global score
+    done="okay, bye"
+    print(done)
 
 
 main()
