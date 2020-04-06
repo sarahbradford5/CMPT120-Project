@@ -10,9 +10,15 @@ locales = ["you caught the ball from your favorite player", "you spilt your drin
 #new global list
 locnames = ["catch", "drink", "friend", "jumbo", "bathroom", "dugout"]
 
+#tracking where player has been
+moves = [False, False, False, False, False, False] 
+
+score=0
+playermoves=0
 position=locales[0]
 currentlocale=locnames[0]
 
+playermoves=0
 
 print("Fenway Trip!")
 enter="press enter to continue"
@@ -29,69 +35,125 @@ def greeting():
 def catch():
     global currentlocale 
     global position #determine players position
-    print("score = + 100")
-    position=locales[0]
+    global score
+    global moves
+    global playermoves 
+    if moves[0] == False:
+        score = score + 100
+    else:
+        score = score 
     currentlocale = locnames[0]
     position = locales[0]
+    print(currentlocale)
     print(position)
+    print (score + 100)
     input(enter)
+    moves[0] = True
+    playermoves = playermoves + 1
+    return moves[0], playermoves
 
 def drink():
     global currentlocale 
     global position #determine players position
-    print("Score = - 50")
-    position=locales[1]
+    global score
+    global moves
+    global playermoves
+    if moves[1] == False:
+        score = score - 50
+    else:
+        score = score 
     currentlocale = locnames[1]
     position = locales[1]
+    print(currentlocale)
     print(position)
+    print (score - 50)
     input(enter)
-    print()
+    moves[1] = True
+    playermoves = playermoves + 1
+    return moves[1], playermoves
 
 
 def friend():
     global currentlocale 
     global position #determine players position
-    print("Score = + 100")
-    position=locales[2]
+    global score
+    global moves
+    global playermoves
+    if moves[2] == False:
+        score = score + 100
+    else:
+        score = score 
     currentlocale = locnames[2]
     position = locales[2]
+    print(currentlocale)
     print(position)
+    print(score + 100)
     input(enter)
-    print()
+    moves[2] = True
+    playermoves = playermoves + 1
+    return moves[2], playermoves
 
 
 def jumbo():
     global currentlocale 
     global position #determine players position
-    print("Score = + 100")
-    position=locales[3]
+    global score
+    global moves
+    global playermoves
+    if moves[3] == False:
+        score = score + 100
+    else:
+        score = score 
     currentlocale = locnames[3]
     position = locales[3]
+    print(currentlocale)
     print(position)
+    print(score + 100)
     input(enter)
-    print()
+    moves[3] = True
+    playermoves = playermoves + 1
+    return moves[3], playermoves
 
 def bathroom():
     global currentlocale 
     global position #determine players position
-    print("Score = - 50")
-    position=locales[4]
+    global score
+    global moves
+    global playermoves
+    if moves[4] == False:
+        score = - 50 
+    else:
+        score = score 
     currentlocale = locnames[4]
     position = locales[4]
+    print(currentlocale)
     print(position)
+    print(score - 50)
     input(enter)
-    print()
+    moves[4] = True
+    playermoves = playermoves + 1
+    return moves [4], playermoves
+    
 
 def dugout():
     global currentlocale 
     global position #determine players position
-    print("Score = + 100")
-    position=locales[5]
+    global score
+    global moves
+    global playermoves
+    if moves[5] == False:
+        score = score + 100
+    else:
+        score = score 
     currentlocale = locnames[5]
     position = locales[5]
+    print(currentlocale)
     print(position)
+    print(score + 100)
     input(enter)
-    print()
+    moves[5] = True
+    playermoves = playermoves + 1
+    return moves[5], playermoves
 
     
 def End():
