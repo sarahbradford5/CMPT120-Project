@@ -30,6 +30,7 @@ def greeting():
     greeting1="hello",name,"how are you?"
     intro="Let's go watch a baseball game!"
     print(greeting1, intro)
+    print(playermoves, 8)
     input(enter)
 
 def catch():
@@ -248,6 +249,9 @@ def loop():
         else:
             x=1
             print(invalid)
+        if playermoves == 8:
+            x = 0
+            quit()
 
 def main():
     greeting()
