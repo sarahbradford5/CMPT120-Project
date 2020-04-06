@@ -1,13 +1,17 @@
 # name: Sarah Bradford
-# date: 3/2/2020
+# date: 4/6/2020
 # citation: got template from iLearn, collaborated with Jadyn Kennedy and Michael Conger
 
 
-
+#global list
 locales = ["you caught the ball from your favorite player", "you spilt your drink all over your jacket", "your friend bought you a tshirt of your favorite player", "you made it on the jumbotron", 
 "you went to the bathroom and missed a great play", "you found a seat right behind the dugout"]
 
+#new global list
+locnames = ["catch", "drink", "friend", "jumbo", "bathroom", "dugout"]
+
 position=locales[0]
+currentlocale=locnames[0]
 
 
 print("Fenway Trip!")
@@ -23,51 +27,69 @@ def greeting():
     input(enter)
 
 def catch():
-    global position
+    global currentlocale 
+    global position #determine players position
+    print("score = + 100")
     position=locales[0]
+    currentlocale = locnames[0]
+    position = locales[0]
     print(position)
-    print("score = +100")
     input(enter)
 
 def drink():
-    global position
+    global currentlocale 
+    global position #determine players position
+    print("Score = - 50")
     position=locales[1]
+    currentlocale = locnames[1]
+    position = locales[1]
     print(position)
-    print("Score = -50")
     input(enter)
     print()
 
 
 def friend():
-    global position
-    position=locales[2]
-    print(position)
+    global currentlocale 
+    global position #determine players position
     print("Score = + 100")
+    position=locales[2]
+    currentlocale = locnames[2]
+    position = locales[2]
+    print(position)
     input(enter)
     print()
 
 
 def jumbo():
-    global position
-    position=locales[3]
-    print(position)
+    global currentlocale 
+    global position #determine players position
     print("Score = + 100")
+    position=locales[3]
+    currentlocale = locnames[3]
+    position = locales[3]
+    print(position)
     input(enter)
     print()
 
 def bathroom():
-    global position
+    global currentlocale 
+    global position #determine players position
+    print("Score = - 50")
     position=locales[4]
+    currentlocale = locnames[4]
+    position = locales[4]
     print(position)
-    print("Score = -50")
     input(enter)
     print()
 
 def dugout():
-    global position
+    global currentlocale 
+    global position #determine players position
+    print("Score = + 100")
     position=locales[5]
+    currentlocale = locnames[5]
+    position = locales[5]
     print(position)
-    print("Score = +100")
     input(enter)
     print()
 
